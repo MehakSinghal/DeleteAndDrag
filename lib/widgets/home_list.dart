@@ -31,9 +31,13 @@ class _HomeListState extends State<HomeList> {
             onDismissed: (direction){
               myList.removeAt(index);
             },
-            child: ListTile(
-              key: UniqueKey(),
-              title: Text(myList[index]),
+            child: Container(
+              margin: EdgeInsets.all(8),
+              decoration: BoxDecoration(border: Border.all(color: Colors.blue, width: 1)),
+              child: ListTile(
+                key: UniqueKey(),
+                title: Text(myList[index]),
+              ),
             ),
           );
         }),
